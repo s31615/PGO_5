@@ -1,23 +1,29 @@
 public class StudyProgramme {
-    private String nazwa;
-    private String opis;
-    private int liczbaSemestrow;
-    private int maxITN;
+    private String name;
+    private String description;
+    private int numberOfSemesters;
+    private int maxITNs; // Maksymalna liczba niedokończonych zapisów
 
-    public StudyProgramme(String nazwa, String opis, int liczbaSemestrow, int maxITN) {
-        this.nazwa = nazwa;
-        this.opis = opis;
-        this.liczbaSemestrow = liczbaSemestrow;
-        this.maxITN = maxITN;
+    public StudyProgramme(String name, String description, int numberOfSemesters, int maxITNs) {
+        this.name = name;
+        this.description = description;
+        this.numberOfSemesters = numberOfSemesters;
+        this.maxITNs = maxITNs;
     }
 
-    // Getters and setters for all fields
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 
     public int getNumberOfSemesters() {
-        return liczbaSemestrow;
+        return numberOfSemesters;
     }
 
-    public int getMaxITN() {
-        return maxITN;
+    public int getMaxITNs() {
+        return maxITNs;
     }
 }

@@ -1,24 +1,27 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Students {
-    private static List<Student> studentsList = new ArrayList<>();
+    private static List<Student> students = new ArrayList<>();
 
     public static void addStudent(Student student) {
-        studentsList.add(student);
+        students.add(student);
     }
 
     public static void promoteAllStudents() {
-        for (Student student : studentsList) {
+        for (Student student : students) {
             student.promoteToNextSemester();
         }
     }
 
-    public static void displayInfoAboutAllStudents() {
-        for (Student student : studentsList) {
-            System.out.println(student);
+    public static void addITNToAllStudents() {
+        for (Student student : students) {
+            student.addITN();
         }
     }
 
-    // Inne metody zarządzania studentami
+    public static void displayInfoAboutAllStudents() {
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
 }
