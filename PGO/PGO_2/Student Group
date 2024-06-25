@@ -1,0 +1,35 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class StudentGroup {
+    private String groupName;
+    private String groupId;
+    private Set<Student> students;
+
+    public StudentGroup(String groupName, String groupId) {
+        this.groupName = groupName;
+        this.groupId = groupId;
+        this.students = new HashSet<>();
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public Set<Student> getStudents() {
+        return students;
+    }
+
+    public void addStudent(Student student) {
+        if (students.size() >= 15) {
+            throw new IllegalStateException("Cannot add more than 15 students to the group.");
+        }
+        if (!students.add(student)) {
+            throw new IllegalStateException("Student is already in the group.");
+        }
+    }
+}

@@ -1,0 +1,13 @@
+# Ignore all .java files
+*.java
+
+# Ignore all .class files, except those in the current directory
+*.class
+!/*.class
+
+# Ignore any other unwanted files or directories
+.DS_Store
+*.log
+.idea/
+*.iml
+out/
